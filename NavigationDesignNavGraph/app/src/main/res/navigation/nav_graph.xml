@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?><!-- 导航图的id是nav_graph，起始目的地是aFragment对应AFragment -->
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/aFragment">
+
+    <include app:graph="@navigation/nav_graph_nested" />
+
+    <fragment
+        android:id="@+id/aFragment"
+        android:name="com.scx.navigation.designnavgraph.AFragment"
+        android:label="aFragment">
+        <action
+            android:id="@+id/action_aFragment_to_bFragment"
+            app:destination="@id/bFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/bFragment"
+        android:name="com.scx.navigation.designnavgraph.BFragment"
+        android:label="bFragment">
+
+        <action
+            android:id="@+id/action_bFragment_to_nestedNavGraph"
+            app:destination="@id/nav_graph_nested" />
+    </fragment>
+
+    <dialog
+        android:id="@+id/tipDialogFragment"
+        android:name="com.scx.navigation.designnavgraph.TipDialogFragment">
+        <argument
+            android:name="from"
+            app:argType="string" />
+    </dialog>
+
+    <action
+        android:id="@+id/action_global_tipDialogFragment"
+        app:destination="@id/tipDialogFragment" />
+
+</navigation>
