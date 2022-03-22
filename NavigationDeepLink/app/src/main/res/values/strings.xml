@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">NavigationDeepLink</string>
+    <string name="open_deep_link">Open DFragment</string>
+    <string name="disabled">Open DFragment Disabled</string>
+<!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

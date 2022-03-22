@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph_nested"
+    app:startDestination="@id/cFragment">
+
+    <fragment
+        android:id="@+id/cFragment"
+        app:route="cFragment"
+        android:name="com.scx.navigation.deepLink.CFragment"
+        android:label="CFragment" >
+    </fragment>
+
+    <fragment
+        android:id="@+id/dFragment"
+        app:route="dFragment"
+        android:name="com.scx.navigation.deepLink.DFragment"
+        android:label="DFragment" >
+
+        <deepLink app:uri="scx://example.com/{id}/{name}?phone={phone}&amp;time={time}"
+            app:action="android.intent.action.MY_ACTION"
+            app:mimeType="type/video1"/>
+
+        <argument
+            android:name="id"
+            app:argType="integer" />
+        <argument
+            android:name="name"
+            app:argType="string" />
+        <argument
+            android:name="phone"
+            app:argType="string"
+            android:defaultValue="123"/>
+        <argument
+            android:name="time"
+            app:argType="string"
+            android:defaultValue="00:00"/>
+    </fragment>
+</navigation>
