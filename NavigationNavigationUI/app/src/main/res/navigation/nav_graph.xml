@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/aFragment">
+
+    <fragment
+        android:id="@+id/aFragment"
+        android:name="com.scx.navigation.navigationui.AFragment"
+        android:label="aFragment"/>
+    <fragment
+        android:id="@+id/bFragment"
+        android:name="com.scx.navigation.navigationui.BFragment"
+        android:label="bFragment{argName}" >
+        <argument
+            android:name="argName"
+            app:argType="string"
+            android:defaultValue="(arg)" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/cFragment"
+        android:name="com.scx.navigation.navigationui.CFragment"
+        android:label="CFragment" />
+
+    <fragment
+        android:id="@+id/dFragment"
+        android:name="com.scx.navigation.navigationui.DFragment"
+        android:label="DFragment" />
+</navigation>

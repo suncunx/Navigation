@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--   WARN: Item Id Must AS Same As Destination ID in nav_graph.xml-->
+    <item
+        android:id="@+id/aFragment"
+        android:icon="@drawable/ic_home"
+        android:title="A" />
+    <item
+        android:id="@+id/bFragment"
+        android:icon="@drawable/ic_home"
+        android:title="B" />
+    <item
+        android:id="@+id/cFragment"
+        android:icon="@drawable/ic_home"
+        android:title="C" />
+    <item
+        android:id="@+id/dFragment"
+        android:icon="@drawable/ic_home"
+        android:title="D" />
+
+</menu>
