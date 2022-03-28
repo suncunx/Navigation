@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/aFragment">
+
+    <fragment
+        android:id="@+id/aFragment"
+        android:name="com.scx.navigation.programmatically.AFragment"
+        android:label="aFragment" />
+    <fragment
+        android:id="@+id/bFragment"
+        android:name="com.scx.navigation.programmatically.BFragment"
+        android:label="bFragment" />
+    <dialog
+        android:id="@+id/tipDialogFragment"
+        android:name="com.scx.navigation.programmatically.TipDialogFragment" />
+
+</navigation>
